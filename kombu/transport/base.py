@@ -252,4 +252,4 @@ class Transport(object):
 
     @property
     def supports_ev(self):
-        return self.implements.async
+        return getattr(self.implements, 'async')

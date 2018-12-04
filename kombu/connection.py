@@ -902,7 +902,7 @@ class Connection(object):
 
     @property
     def is_evented(self):
-        return self.transport.implements.async
+        return getattr(self.transport.implements, 'async')
 BrokerConnection = Connection  # noqa: E305
 
 
